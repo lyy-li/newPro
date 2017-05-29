@@ -61,7 +61,12 @@ export default{
 		}
 	},
 	mounted(){
-	
+		var mySwiper = new Swiper ('.swiper-container', {
+		    direction: 'horizontal',
+		    loop: true,
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+  		})
 		
 	}
 }
@@ -115,8 +120,21 @@ export default{
 }
 
 .yy-home-service{
-	
+	width: 100%;
+	height: 180px;
 }
 
+.yy-home-service-item{
+	float: left;
+	width: 15%;
+}
+
+.yy-home-service-img{
+	width: 100%;
+}
+
+.yy-home-service-img img{
+	width: 100%;
+}
 
 </style>
