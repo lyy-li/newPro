@@ -1,0 +1,24 @@
+
+@font-face {font-family: "iconfont";
+  src: 
+  url('iconfont.ttf?t=1495880211147') format('truetype');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:22px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wodedingdan:before { content: "\e652"; }
+
+.icon-shangchengicon08:before { content: "\e608"; }
+
+.icon-wodejiaren:before { content: "\e698"; }
+
+.icon-shoutidai:before { content: "\e683"; }
+
+.icon-fangdajing:before { content: "\e607"; }
+
