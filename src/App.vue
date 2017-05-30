@@ -5,7 +5,7 @@
 		
 		<div class="yy-tabs">
 			<div class="yy-tab" v-for="(tabItem,index) in tabItemArr" :key="index" @click="clickActon(index)">
-				<span class="iconfont" :class="[tabItem.icon,{'selected':selectedIndex==index}]" ></span>
+				<span :class="['iconfont', tabItem.icon,{'selected':selectedIndex==index}]" ></span>
 				<p class="yy-title" :class="{'selected':selectedIndex==index}">{{tabItem.title}}</p>
 			</div>
 		</div>
@@ -24,10 +24,10 @@ export default{
 		return{
 			selectedIndex:0,
 			tabItemArr:[
-				{title:'首页',path:'home',icon:'iconfont icon-shoutidai'},
-				{title:'我的订单',path:'order',icon:'iconfont icon-wodedingdan'},
-				{title:'艺人中心',path:'artist',icon:'iconfont icon-wodejiaren'},
-				{title:'个人中心',path:'me',icon:'iconfont icon-shangchengicon08'}
+				{title:'首页',path:'home',icon:'yy-tab-icon icon-shoutidai'},
+				{title:'我的订单',path:'order',icon:'yy-tab-icon icon-wodedingdan'},
+				{title:'艺人中心',path:'artist',icon:'yy-tab-icon icon-wodejiaren'},
+				{title:'个人中心',path:'me',icon:'yy-tab-icon icon-shangchengicon08'}
 			]
 		}
 	},
@@ -55,9 +55,10 @@ export default{
 
 .yy-tabs{
 	width: 100%;
-    height: 49px;
+	/* 最好的实践是，不要定死父容器的高度，用内容的宽高撑开 */
+    /* height: 120px; */
     display: flex;
-    background-color: #ffffff;
+    background-color: #fff;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -68,18 +69,20 @@ export default{
 	flex: 1;
 	text-align: center;
 }
-
-.yy-tab span{
-	line-height: 34px;
+.yy-tab-icon {
+	font-size: 42px; /*px*/
+	color: #a4a4a4;
+	display: inline-block;
+	margin: 23px 0 16px 0;
 }
 
 .yy-title{
-	font-size: 12px;
-    transform: scale(0.88888);
+	font-size: 22px; /*px*/
     color: #cacaca;
+	margin-bottom: 14px;
 }
 
- .selected{
+.selected{
 	color: orange;
 }
 .iconfont.selected{
